@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -75,25 +75,101 @@ public class Main {
         for (Tank tank : tanks) {
             System.out.println(tank.crew.getFirst().name);
         }
-        for (int d = 1; d < 100000; d++) {
-
-            for (int i = 1; i < 100000; i++) {
-                pociski.clear();
-                System.out.println("Wyczyszczono magazyn");
-
-            }
+        /* for (int d = 1; d <= 10; d++) {
             if (pociski.isEmpty()) {
-                for (int i = 1; i < 100000; i++) {
+                for (int i = 1; i <= 10; i++) {
                     pociski.add(pocisk);
                     System.out.println("Dodano pocisk");
                 }
-                System.out.println("Dodano wszystkie pociski");
-            }
-            for (int i = 1; i < 100000; i++) {
-                pociski.clear();
 
             }
-            System.out.println("Czy magazyn jest pusty " + pociski.isEmpty());
+                for (int j = 1; j <= 10; j++) {
+                    pociski.remove(pocisk);
+                    System.out.println("Usunieto amunicje");
+                }
+                System.out.println("Czy magazyn jest pusty " + pociski.isEmpty());
+        } */
+/*
+        ArrayList<Pocisk> magazynek = new ArrayList<>();
+        magazynek.add(new Pocisk(5,5,5,5,5));
+        magazynek.add(new Pocisk(5,5,5,5,5));
+        magazynek.add(new Pocisk(5,5,5,5,5));
+        magazynek.add(new Pocisk(5,5,5,5,5));
+        magazynek.add(new Pocisk(5,5,5,5,5));
+        Iterator<Pocisk> iterator = magazynek.iterator();
+        while(iterator.hasNext()){
+            System.out.println(iterator.next().dlugosc);
+            iterator.remove();
+        }
+        magazynek.add(new Pocisk(5,5,5,5,5));
+        magazynek.add(new Pocisk(5,5,5,5,5));
+        magazynek.add(new Pocisk(5,5,5,5,5));
+        magazynek.add(new Pocisk(5,5,5,5,5));
+        magazynek.add(new Pocisk(5,5,5,5,5));
+
+        for (Pocisk pocisk2: magazynek){
+            System.out.println(magazynek);
+            magazynek.remove(pocisk2);
+        }
+
+
+        ArrayList<String> listaOsob = new ArrayList<>();
+
+        listaOsob.add("Wiktoria");
+        listaOsob.add("+Igor");
+        listaOsob.add("Bartosz");
+        listaOsob.add("Wiktor");
+        listaOsob.add("Mateusz");
+        listaOsob.add("Adrian");
+        listaOsob.add("Tomasz");
+        listaOsob.add("Ansh");
+        listaOsob.add("Jakub");
+        listaOsob.add("Maciej");
+        listaOsob.add("Karol");
+        listaOsob.add("Krystian");
+        listaOsob.add("Krzysztof");
+        listaOsob.add("Filip");
+
+        System.out.println("Lista nieposortowana");
+        System.out.println(listaOsob);
+        Collections.sort(listaOsob);
+        System.out.println("Posortowane");
+        System.out.println(listaOsob);
+
+*/
+        ArrayList<Integer> lista = new ArrayList<>();
+        lista.add(1);
+        lista.add(2);
+        lista.add(3);
+        lista.add(4);
+        lista.add(5);
+        lista.add(6);
+        lista.add(7);
+        lista.add(8);
+        lista.add(9);
+        lista.add(10);
+
+        ArrayList<Integer> lista2 = new ArrayList<>();
+        lista2.add(1);
+        lista2.add(2);
+        lista2.add(3);
+        lista2.add(4);
+        lista2.add(5);
+        lista2.add(6);
+        lista2.add(7);
+        lista2.add(8);
+        lista2.add(9);
+        lista2.add(10);
+
+        System.out.println("Lista 1");
+        System.out.println(lista);
+        System.out.println("Lista 2");
+        System.out.println(lista2);
+
+        lista.retainAll(lista2);
+
+        for(int i :lista){
+            System.out.println(i);
         }
     }
 }
