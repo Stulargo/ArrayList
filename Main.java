@@ -135,31 +135,36 @@ public class Main {
         Collections.sort(listaOsob);
         System.out.println("Posortowane");
         System.out.println(listaOsob);
+        */
 
-*/
+        Random random = new Random();
+
+
         ArrayList<Integer> lista = new ArrayList<>();
-        lista.add(1);
-        lista.add(2);
-        lista.add(3);
-        lista.add(4);
-        lista.add(5);
-        lista.add(6);
-        lista.add(7);
-        lista.add(8);
-        lista.add(9);
-        lista.add(10);
+        lista.add(random.nextInt(100));
+        lista.add(random.nextInt(100));
+        lista.add(random.nextInt(100));
+        lista.add(random.nextInt(100));
+        lista.add(random.nextInt(100));
+        lista.add(random.nextInt(100));
+        lista.add(random.nextInt(100));
+        lista.add(random.nextInt(100));
+        lista.add(random.nextInt(100));
+        lista.add(random.nextInt(100));
+
 
         ArrayList<Integer> lista2 = new ArrayList<>();
-        lista2.add(1);
-        lista2.add(2);
-        lista2.add(3);
-        lista2.add(4);
-        lista2.add(5);
-        lista2.add(6);
-        lista2.add(7);
-        lista2.add(8);
-        lista2.add(9);
-        lista2.add(10);
+        lista2.add(random.nextInt(100));
+        lista2.add(random.nextInt(100));
+        lista2.add(random.nextInt(100));
+        lista2.add(random.nextInt(100));
+        lista2.add(random.nextInt(100));
+        lista2.add(random.nextInt(100));
+        lista2.add(random.nextInt(100));
+        lista2.add(random.nextInt(100));
+        lista2.add(random.nextInt(100));
+        lista2.add(random.nextInt(100));
+
 
         System.out.println("Lista 1");
         System.out.println(lista);
@@ -167,9 +172,9 @@ public class Main {
         System.out.println(lista2);
 
         lista.retainAll(lista2);
-
+        System.out.println("Liczby wspolne to:");
         for(int i :lista){
-            System.out.println(i);
+            System.out.print(i+" ,");
         }
     }
 }
